@@ -10,25 +10,25 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.fitch.god</groupId>
-    <artifactId>web</artifactId>
+    <artifactId>finch-god-dao-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>web</name>
-    <description>Demo project for Spring Boot</description>
+    <description>ics means intelligent customer service system</description>
+
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,21 +45,11 @@
         </dependency>
     </dependencies>
 
-
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>

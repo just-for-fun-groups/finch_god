@@ -9,7 +9,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.finch.god</groupId>
     <artifactId>finch-god-common-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>finch-god-common-java</name>

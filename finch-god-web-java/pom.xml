@@ -10,25 +10,36 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>dao</artifactId>
+    <groupId>com.fitch.god</groupId>
+    <artifactId>finch-god-web-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>ics means intelligent customer service system</description>
-
+    <name>finch-god-web-java</name>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.finch.god</groupId>
+            <artifactId>finch-god-dao-java</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.finch.god</groupId>
+            <artifactId>finch-god-common-java</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,11 +56,21 @@
         </dependency>
     </dependencies>
 
+
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>

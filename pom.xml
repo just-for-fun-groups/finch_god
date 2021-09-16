@@ -14,9 +14,9 @@
     </parent>
 
     <modules>
-        <module>common</module>
-        <module>dao</module>
-        <module>web</module>
+        <module>finch-god-common-java</module>
+        <module>finch-god-dao-java</module>
+        <module>finch-god-web-java</module>
     </modules>
 
 </project>
