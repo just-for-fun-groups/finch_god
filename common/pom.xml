@@ -7,14 +7,12 @@
         <groupId>com.finch.god</groupId>
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
-    <artifactId>common</artifactId>
+    <groupId>com.finch.god</groupId>
+    <artifactId>finch-god-common-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>common</name>
-    <description>Demo project for Spring Boot</description>
+    <name>finch-god-common-java</name>
 
     <properties>
         <java.version>1.8</java.version>
