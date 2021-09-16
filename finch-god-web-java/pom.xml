@@ -26,12 +26,6 @@
 
         <dependency>
             <groupId>com.finch.god</groupId>
-            <artifactId>finch-god-dao-java</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.finch.god</groupId>
             <artifactId>finch-god-common-java</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

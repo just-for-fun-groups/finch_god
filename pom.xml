@@ -15,7 +15,6 @@
 
     <modules>
         <module>finch-god-common-java</module>
-        <module>finch-god-dao-java</module>
         <module>finch-god-web-java</module>
     </modules>
 

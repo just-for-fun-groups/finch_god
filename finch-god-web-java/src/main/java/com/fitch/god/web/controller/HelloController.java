@@ -1,6 +1,6 @@
 package com.fitch.god.web.controller;
 
-import com.fitch.god.web.config.Constants;
+import com.finch.god.common.config.Constants;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

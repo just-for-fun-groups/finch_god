@@ -1,4 +1,4 @@
-package com.fitch.god.web.config;
+package com.finch.god.common.config;
 
 import org.springframework.util.Base64Utils;
 
