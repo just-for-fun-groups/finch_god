@@ -7,7 +7,7 @@ public class UserInfo {
 
     private String email;
 
-    private Byte isDel;
+    private Integer isDel;
 
     private Integer createTime;
 
@@ -37,11 +37,11 @@ public class UserInfo {
         this.email = email == null ? null : email.trim();
     }
 
-    public Byte getIsDel() {
+    public Integer getIsDel() {
         return isDel;
     }
 
-    public void setIsDel(Byte isDel) {
+    public void setIsDel(Integer isDel) {
         this.isDel = isDel;
     }
 
