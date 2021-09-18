@@ -24,6 +24,13 @@
     from match_detail
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="countByPlay" resultMap="BaseResultMap">
+    select
+      player_id, sum(score) as score
+    from
+      match_detail
+    group by player_id
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from match_detail
     where id = #{id,jdbcType=INTEGER}

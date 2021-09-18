@@ -17,16 +17,15 @@
     from player_info
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from player_info
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from player_info
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.finch.god.common.entity.PlayerInfo">
-    insert into player_info (id, name, signature, 
-      create_time, update_time)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{signature,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=INTEGER}, #{updateTime,jdbcType=INTEGER})
-  </insert>
   <insert id="insertSelective" parameterType="com.finch.god.common.entity.PlayerInfo">
     insert into player_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -80,14 +79,6 @@
         update_time = #{updateTime,jdbcType=INTEGER},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.finch.god.common.entity.PlayerInfo">
-    update player_info
-    set name = #{name,jdbcType=VARCHAR},
-      signature = #{signature,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=INTEGER},
-      update_time = #{updateTime,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
