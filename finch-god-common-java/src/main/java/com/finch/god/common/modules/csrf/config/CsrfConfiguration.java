@@ -64,10 +64,6 @@ public class CsrfConfiguration {
     }
 
     private void initRefererHosts() {
-        if (StringUtils.isNotBlank(this.csrfProperties.referer)) {
-            this.refererHosts.add(host(this.csrfProperties.referer));
-        }
-
         if (StringUtils.isNotBlank(this.csrfProperties.referers)) {
             Stream.of(StringUtils.split(this.csrfProperties.referers, Constants.SR_REFERERS))
                     .map(this::host).forEach(this.refererHosts::add);

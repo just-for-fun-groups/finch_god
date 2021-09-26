@@ -18,10 +18,9 @@ spring:
 
 csrf:
   types: token    # 验证方式(referer/token)(多种使用";"分隔)
-  #referer: http://47.106.112.192    // Deprecated from 1.1.4，兼容 // referer验证方式下的url(使用token方式可以不配置)
-  referers: http://47.106.112.192   # referer验证方式下的url(1.1.4开始支持)(多种使用";"分隔，使用token方式可以不配置)
-  paramName: p_token    # token验证方式下的token参数名(使用referer方式可以不配置)
-  tokenName: c_token    # token验证方式下的cookie名(使用referer方式可以不配置)
-  tokenUrl: /token    # token验证方式下的token生成地址(使用referer方式可以不配置)
-  tokenMaxAge: 7200    # token验证方式下的cookie有效期(单位:s)(使用referer方式可以不配置)
+  referers: http://47.106.112.192   # referer验证方式下的url(多种使用";"分隔，使用token方式可以不配置)
+  paramName: p_token    # token验证方式下的token参数名
+  tokenName: c_token    # token验证方式下的cookie名
+  tokenUrl: /token    # token验证方式下的token生成地址
+  tokenMaxAge: 7200    # token验证方式下的cookie有效期(单位:s)
 

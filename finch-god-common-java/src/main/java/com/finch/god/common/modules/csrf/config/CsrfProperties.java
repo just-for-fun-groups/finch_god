@@ -17,6 +17,5 @@ public class CsrfProperties {
     String tokenName;
     String tokenUrl;
     int tokenMaxAge;
-    String referer; // Deprecated from 1.1.4，兼容
     String referers;
 }
