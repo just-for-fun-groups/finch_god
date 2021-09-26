@@ -1,0 +1,20 @@
+## datasource
+spring:
+  datasource:
+    name: mysql
+    url: jdbc:mysql://47.106.112.192:3306/majiang?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: alliance
+    driverClassName: com.mysql.jdbc.Driver
+    minIdle: 3
+    maxActive: 40
+    initialSize: 3
+    timeBetweenEvictionRunsMillis: 3000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+
