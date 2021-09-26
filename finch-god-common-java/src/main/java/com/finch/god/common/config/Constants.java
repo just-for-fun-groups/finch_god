@@ -42,6 +42,19 @@ public class Constants {
     public static String FILE_WHITE_LIST = null;
     public static String FILE_BLACK_LIST = null;
 
+    /************************ csrf相关常量 START ************************/
+
+    public static final String SR_TYPES = ";";
+
+    public static final String SR_REFERERS = SR_TYPES;
+
+    public static final String SALT_TOKEN_SIGN = "fpSg8416uqWC4Hgv";
+
+    public static final int EXPIRE_DEFAULT_TOKEN = 7200;
+
+    /************************ csrf相关常量 END ************************/
+
+
     public static String getAppCode() {
         return new String(Base64Utils.decodeFromString(APP_CODE));
     }
