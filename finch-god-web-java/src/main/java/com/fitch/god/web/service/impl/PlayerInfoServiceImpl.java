@@ -22,5 +22,6 @@ public class PlayerInfoServiceImpl implements PlayerInfoService {
 
         return playerInfoMapper.insertSelective(playerInfo);
 
+
     }
 }
