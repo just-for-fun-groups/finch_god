@@ -1,7 +1,8 @@
-package com.fitch.god.web.service;
+package com.fitch.god.web.service.impl;
 
 import com.finch.god.common.dao.UserInfoMapper;
 import com.finch.god.common.entity.UserInfo;
+import com.fitch.god.web.service.userInfoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -25,7 +26,7 @@ public class userInfoServiceImpl implements userInfoService {
 
     @Override
     public UserInfo selectByPrimaryKey(Integer id) {
-        return null;
+        return userInfoMapper.selectByPrimaryKey(id);
     }
 
     @Override

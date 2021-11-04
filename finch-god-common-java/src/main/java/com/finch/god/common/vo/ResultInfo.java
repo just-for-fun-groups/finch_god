@@ -9,7 +9,7 @@ public class ResultInfo implements Serializable {
     /**
      * 成功状态码
      */
-    public static final Integer RESULT_CODE_SUCCESS = 0;
+    public static final Integer RESULT_CODE_SUCCESS =20000;
     public static final String RESULT_SUCCESS_MSG = "操作成功";
 
     /**
@@ -25,7 +25,7 @@ public class ResultInfo implements Serializable {
     /**
      * 状态码对应信息
      */
-    private String msg;
+    private String message;
     /**
      * 返回数据
      */
@@ -35,14 +35,14 @@ public class ResultInfo implements Serializable {
         super();
     }
 
-    public ResultInfo(Integer code, String msg) {
+    public ResultInfo(Integer code, String message) {
         super();
         this.code = code;
-        this.msg = msg;
+        this.message = message;
     }
 
-    public ResultInfo(Integer code, String msg, Object data) {
-        this(code, msg);
+    public ResultInfo(Integer code, String message, Object data) {
+        this(code, message);
         this.data = data;
     }
 
@@ -54,20 +54,20 @@ public class ResultInfo implements Serializable {
         return new ResultInfo(RESULT_CODE_ERROR, RESULT_ERROR_MSG, data);
     }
 
-    public static ResultInfo errorMsg(String msg) {
-        return new ResultInfo(RESULT_CODE_ERROR, msg);
+    public static ResultInfo errorMsg(String message) {
+        return new ResultInfo(RESULT_CODE_ERROR, message);
     }
 
-    public static ResultInfo error(Integer code, String msg) {
-        return new ResultInfo(RESULT_CODE_ERROR, msg);
+    public static ResultInfo error(Integer code, String message) {
+        return new ResultInfo(RESULT_CODE_ERROR, message);
     }
 
-    public static ResultInfo error(String msg, Object data) {
-        return new ResultInfo(RESULT_CODE_ERROR, msg, data);
+    public static ResultInfo error(String message, Object data) {
+        return new ResultInfo(RESULT_CODE_ERROR, message, data);
     }
 
-    public static ResultInfo error(Integer code, String msg, Object data) {
-        return new ResultInfo(code, msg, data);
+    public static ResultInfo error(Integer code, String message, Object data) {
+        return new ResultInfo(code, message, data);
     }
 
     public Integer getCode() {
@@ -78,12 +78,12 @@ public class ResultInfo implements Serializable {
         this.code = code;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public Object getData() {
