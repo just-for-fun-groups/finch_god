@@ -21,5 +21,6 @@ public class PlayerInfoServiceImpl implements PlayerInfoService {
         playerInfo.setUpdateTime(LocalDateUtils.nowSecond());
 
         return playerInfoMapper.insertSelective(playerInfo);
+
     }
 }
