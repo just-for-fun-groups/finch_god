@@ -9,18 +9,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @CrossOrigin
 @RestController
 @RequestMapping("/getPlayerInfo")
 public class PlayerInfoController {
     @Autowired
     private PlayerInfoService playerInfoService;
+
+    /**
+     * 新增玩家信息
+     * @param playerInfo
+     * @return
+     */
     @RequestMapping("/insertPlayerInfo")
     public ResultInfo insertPlayerInfo(@RequestBody PlayerInfo playerInfo){
         int i = playerInfoService.insertPlayerInfo(playerInfo);
         System.out.println("1111111");
         return ResultInfo.success("");
 
+    }
+    @RequestMapping("/getAllPlayer")
+    public ResultInfo getAllPlayer(){
+        List allPlayerList = playerInfoService.selectAll();
+        return ResultInfo.success(allPlayerList);
     }
 
 }
