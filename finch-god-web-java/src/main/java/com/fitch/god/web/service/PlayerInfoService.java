@@ -7,4 +7,5 @@ import java.util.List;
 public interface PlayerInfoService {
     public int insertPlayerInfo(PlayerInfo playerInfo);
     public List selectAll();
+    public Integer deletePlayerInfo(Integer id);
 }
