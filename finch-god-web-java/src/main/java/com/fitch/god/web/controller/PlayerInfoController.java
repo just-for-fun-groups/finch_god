@@ -33,6 +33,7 @@ public class PlayerInfoController {
     @RequestMapping("/getAllPlayer")
     public ResultInfo getAllPlayer(){
         List allPlayerList = playerInfoService.selectAll();
+        System.out.println(11111);
         return ResultInfo.success(allPlayerList);
     }
 
