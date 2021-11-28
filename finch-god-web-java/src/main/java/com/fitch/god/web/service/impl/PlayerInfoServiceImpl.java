@@ -30,4 +30,9 @@ public class PlayerInfoServiceImpl implements PlayerInfoService {
     public List selectAll() {
         return playerInfoMapper.selectAll();
     }
+
+    @Override
+    public Integer deletePlayerInfo(Integer id) {
+        return playerInfoMapper.deleteByPrimaryKey(id);
+    }
 }
