@@ -19,6 +19,16 @@ public class MatchInfo {
 
     private Integer updateTime;
 
+    private String players;
+
+    public String getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(String players) {
+        this.players = players;
+    }
+
     public Integer getId() {
         return id;
     }

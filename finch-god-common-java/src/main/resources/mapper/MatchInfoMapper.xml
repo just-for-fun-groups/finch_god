@@ -11,10 +11,11 @@
     <result column="updater_uid" jdbcType="INTEGER" property="updaterUid" />
     <result column="updater" jdbcType="VARCHAR" property="updater" />
     <result column="update_time" jdbcType="INTEGER" property="updateTime" />
+    <result column="players" jdbcType="VARCHAR" property="players"/>
   </resultMap>
   <sql id="Base_Column_List">
     id, address, match_date, creator_uid, creator, create_time, updater_uid, updater, 
-    update_time
+    update_time,players
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -117,4 +118,14 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT b.id,b.players,i.address,i.create_time from (
+           SELECT m.id,  GROUP_CONCAT(d.player_name) players
+           FROM match_info m
+                  left join match_detail d on m.id = d.match_id
+           GROUP BY m.id
+         ) b
+           left join match_info i on i.id=b.id
+    order by i.id desc
+  </select>
 </mapper>
